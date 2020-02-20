@@ -45,7 +45,7 @@
                                     <template v-for="(list, date) in item.lists">
                                         <template v-for="(detail, no) in list">
                                             <tr>
-                                                <td>{{ date }}</td>
+                                                <td><template v-if="0 === no">{{ date }}</template></td>
                                                 <td class="td-name">
                                                     <h4 style="color: #0d47a1">{{ detail.subject }}</h4>
                                                     <br>
