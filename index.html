@@ -57,7 +57,10 @@
                                     </template>
                                     <tr>
                                         <td colspan="2" class="td-total">結餘</td>
-                                        <td class="td-price"><small>NT$</small>2,346</td>
+                                        <td class="td-price"><small>NT$</small>{{ _(item.lists)
+                                            .map()
+                                            .flatten()
+                                            .sumBy(({ type, amount }) => type === 'expense' ? -amount : amount) }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -85,5 +88,6 @@
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="assets/js/charge.js?ver=20200220"></script>
 </body>
