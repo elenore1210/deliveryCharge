@@ -34,6 +34,14 @@ new Vue({
                             type: 'expense',
                             amount : 75
                         }
+                    ],
+                    '2/26' : [
+                        {
+                            subject: '芝芝草莓果粒',
+                            company: '麻古茶坊',
+                            type: 'expense',
+                            amount : 85
+                        }
                     ]
                 }
             },
@@ -82,6 +90,20 @@ new Vue({
                             company: '星巴克',
                             type: 'expense',
                             amount : 110
+                        }
+                    ],
+                    '2/26' : [
+                        {
+                            subject: '四號電池',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 55
+                        },
+                        {
+                            subject: '紅茶拿鐵',
+                            company: '麻古茶坊',
+                            type: 'expense',
+                            amount : 81
                         }
                     ]
                 }
