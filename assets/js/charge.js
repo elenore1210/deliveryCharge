@@ -42,6 +42,14 @@ new Vue({
                             type: 'expense',
                             amount : 85
                         }
+                    ],
+                    '3/5' : [
+                        {
+                            subject: '綜合3',
+                            company: '綠逗薏人',
+                            type: 'expense',
+                            amount : 65
+                        }
                     ]
                 }
             },
@@ -105,6 +113,14 @@ new Vue({
                             type: 'expense',
                             amount : 81
                         }
+                    ],
+                    '3/5' : [
+                        {
+                            subject: '熱原味冰糖豆花+花生&芋園',
+                            company: '綠逗薏人',
+                            type: 'expense',
+                            amount : 60
+                        }
                     ]
                 }
             },
@@ -145,6 +161,20 @@ new Vue({
                             company: 'deliveroo',
                             type: 'expense',
                             amount : 50
+                        }
+                    ],
+                    '3/5' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 30
+                        },
+                        {
+                            subject: '蒟蒻綠豆薏仁鮮奶',
+                            company: '綠逗薏人',
+                            type: 'expense',
+                            amount : 60
                         }
                     ]
                 }
