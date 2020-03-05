@@ -1,11 +1,14 @@
 new Vue({
     el: '.content',
     data: {
+        selectItem : '',
         collect : [
             {
                 name : 'Cherry',
                 subtitle : '',
                 theme: 'card-header-rose',
+                iconsHeader: 'local_bar',
+                iconsFooter: 'filter_vintage',
                 lists: {
                     '2/15' : [
                         {
@@ -57,6 +60,8 @@ new Vue({
                 name : '果子狸',
                 subtitle : '',
                 theme: 'card-header-primary',
+                iconsHeader: 'sports_kabaddi',
+                iconsFooter: 'all_inclusive',
                 lists : {
                     '2/15' : [
                         {
@@ -128,6 +133,8 @@ new Vue({
                 name : 'Elenore',
                 subtitle : '',
                 theme: 'card-header-success',
+                iconsHeader: 'wb_sunny',
+                iconsFooter: 'emoji_nature',
                 lists : {
                     '2/15' : [
                         {

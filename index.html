@@ -28,7 +28,46 @@
             <div class="container-fluid">
                 <div class="row">
                     <template v-for="(item, index) in collect">
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div :class="'card-header ' + item.theme + ' card-header-icon'">
+                                <div class="card-icon">
+                                    <i class="material-icons">{{ item.iconsHeader }}</i>
+                                </div>
+                                <p class="card-category">{{ item.name }}</p>
+                                <h3 class="card-title">NT$ {{ _(item.lists)
+                                    .map()
+                                    .flatten()
+                                    .sumBy(({ type, amount }) => type === 'expense' ? -amount : amount) }}</h3>
+                            </div>
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <i class="material-icons">{{ item.iconsFooter }}</i> <a href="#" @click="selectItem = item.name">show more...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </template>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-info card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">local_atm</i>
+                                </div>
+                                <p class="card-category">Arashi</p>
+                                <h3 class="card-title"> ? </h3>
+                            </div>
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <i class="material-icons">music_note</i> Jenny Pay
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <template v-for="(item, index) in collect">
+                    <div v-if="item.name == selectItem" class="col-md-12">
                         <div class="card">
                             <div :class="'card-header ' + item.theme">
                                 <h4 class="card-title">{{ item.name }}</h4>
@@ -79,7 +118,7 @@
                         document.write(new Date().getFullYear())
                     </script>
                     , made with <i class="material-icons">favorite </i> by
-                    Arashi for a better web.
+                    Arashi.
                 </div>
             </div>
         </footer>
