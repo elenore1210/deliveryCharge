@@ -126,6 +126,14 @@ new Vue({
                             type: 'expense',
                             amount : 60
                         }
+                    ],
+                    '3/12' : [
+                        {
+                            subject: 'Tiamo Hokkaido Latte',
+                            company: 'Jenny Pay',
+                            type: 'income',
+                            amount : 70
+                        }
                     ]
                 }
             },
