@@ -134,6 +134,14 @@ new Vue({
                             type: 'income',
                             amount : 70
                         }
+                    ],
+                    '3/17' : [
+                        {
+                            subject: '炸雞軟骨',
+                            company: '巧喰雞',
+                            type: 'expense',
+                            amount : 55
+                        }
                     ]
                 }
             },
@@ -190,6 +198,20 @@ new Vue({
                             company: '綠逗薏人',
                             type: 'expense',
                             amount : 60
+                        }
+                    ],
+                    '3/17' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 100
+                        },
+                        {
+                            subject: '蜜汁碳烤雞排',
+                            company: '巧喰雞',
+                            type: 'expense',
+                            amount : 75
                         }
                     ]
                 }
