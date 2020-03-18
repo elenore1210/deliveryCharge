@@ -53,6 +53,14 @@ new Vue({
                             type: 'expense',
                             amount : 65
                         }
+                    ],
+                    '3/18' : [
+                        {
+                            subject: '鴛鴦奶茶',
+                            company: '不要對我尖叫',
+                            type: 'expense',
+                            amount : 80
+                        }
                     ]
                 }
             },
@@ -142,6 +150,14 @@ new Vue({
                             type: 'expense',
                             amount : 55
                         }
+                    ],
+                    '3/18' : [
+                        {
+                            subject: '玫瑰鮮奶茶',
+                            company: '不要對我尖叫',
+                            type: 'expense',
+                            amount : 60
+                        }
                     ]
                 }
             },
@@ -212,6 +228,14 @@ new Vue({
                             company: '巧喰雞',
                             type: 'expense',
                             amount : 75
+                        }
+                    ],
+                    '3/18' : [
+                        {
+                            subject: '蜂蜜烏龍',
+                            company: '不要對我尖叫',
+                            type: 'expense',
+                            amount : 40
                         }
                     ]
                 }
