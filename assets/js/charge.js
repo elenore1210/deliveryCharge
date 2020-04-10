@@ -76,6 +76,12 @@ new Vue({
                             company: 'Jenny Pay',
                             type: 'icome',
                             amount : 500
+                        },
+                        {
+                            subject: '決明子紅茶',
+                            company: '小日子商號',
+                            type: 'expense',
+                            amount : 25
                         }
                     ]
                 }
@@ -190,7 +196,15 @@ new Vue({
                             type: 'expense',
                             amount : 200
                         }
-                    ]
+                    ],
+                    '4/10' : [
+                        {
+                            subject: '小日子鮮奶茶',
+                            company: '小日子商號',
+                            type: 'expense',
+                            amount : 45
+                        }
+                    ],
                 }
             },
             {
@@ -274,6 +288,20 @@ new Vue({
                         {
                             subject: '甘蔗牛奶',
                             company: '黑白榨甘蔗鮮果汁',
+                            type: 'expense',
+                            amount : 50
+                        }
+                    ],
+                    '4/10' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 100
+                        },
+                        {
+                            subject: '黑糖鮮奶茶',
+                            company: '小日子商號',
                             type: 'expense',
                             amount : 50
                         }
