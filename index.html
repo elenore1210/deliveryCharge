@@ -35,10 +35,17 @@
                                     <i class="material-icons">{{ item.iconsHeader }}</i>
                                 </div>
                                 <p class="card-category">{{ item.name }}</p>
-                                <h3 class="card-title">NT$ {{ _(item.lists)
+                                <h3 class="card-title">
+                                    <template v-if="'Arashi' === item.name">
+                                        <span class="material-icons">music_note</span>
+                                    </template>
+                                    <template v-else>
+                                    NT$ {{ _(item.lists)
                                     .map()
                                     .flatten()
-                                    .sumBy(({ type, amount }) => type === 'expense' ? -amount : amount) }}</h3>
+                                    .sumBy(({ type, amount }) => type === 'expense' ? -amount : amount) }}
+                                    </template>
+                                </h3>
                             </div>
                             <div class="card-footer">
                                 <div class="stats">
@@ -48,22 +55,6 @@
                         </div>
                     </div>
                     </template>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-info card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">local_atm</i>
-                                </div>
-                                <p class="card-category">Arashi</p>
-                                <h3 class="card-title"> ? </h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">music_note</i> Jenny Pay
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <template v-for="(item, index) in collect">
@@ -128,5 +119,5 @@
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-    <script src="assets/js/charge.js?ver=20200318"></script>
+    <script src="assets/js/charge.js?ver=20200410"></script>
 </body>
