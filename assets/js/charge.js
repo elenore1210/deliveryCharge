@@ -260,8 +260,8 @@ new Vue({
                 name : 'Arashi',
                 subtitle : '',
                 theme: 'card-header-info',
-                iconsHeader: 'local_atm',
-                iconsFooter: 'music_note',
+                iconsHeader: 'local_cafe',
+                iconsFooter: 'local_atm',
                 lists : {
                     '4/9' : [
                         {
