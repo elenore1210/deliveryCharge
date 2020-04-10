@@ -53,6 +53,22 @@ new Vue({
                             type: 'expense',
                             amount : 65
                         }
+                    ],
+                    '4/9' : [
+                        {
+                            subject: '甘蔗青茶',
+                            company: '黑白榨甘蔗鮮果汁',
+                            type: 'expense',
+                            amount : 50
+                        }
+                    ],
+                    '4/10' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 500
+                        }
                     ]
                 }
             },
@@ -142,6 +158,22 @@ new Vue({
                             type: 'expense',
                             amount : 55
                         }
+                    ],
+                    '4/8' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'icome',
+                            amount : 475
+                        }
+                    ],
+                    '4/9' : [
+                        {
+                            subject: '咖啡豆贊助',
+                            company: 'Jenny Pay',
+                            type: 'expense',
+                            amount : 200
+                        }
                     ]
                 }
             },
@@ -212,6 +244,31 @@ new Vue({
                             company: '巧喰雞',
                             type: 'expense',
                             amount : 75
+                        }
+                    ],
+                    '4/9' : [
+                        {
+                            subject: '甘蔗牛奶',
+                            company: '黑白榨甘蔗鮮果汁',
+                            type: 'expense',
+                            amount : 50
+                        }
+                    ]
+                }
+            },
+            {
+                name : 'Arashi',
+                subtitle : '',
+                theme: 'card-header-info',
+                iconsHeader: 'local_atm',
+                iconsFooter: 'music_note',
+                lists : {
+                    '4/9' : [
+                        {
+                            subject: '咖啡豆贊助',
+                            company: '果子狸',
+                            type: 'icome',
+                            amount : 200
                         }
                     ]
                 }
