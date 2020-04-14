@@ -1,11 +1,10 @@
 new Vue({
     el: '.content',
     data: {
-        selectItem : '',
+        selectItem : 'Arashi',
         collect : [
             {
                 name : 'Cherry',
-                subtitle : '',
                 theme: 'card-header-rose',
                 iconsHeader: 'local_bar',
                 iconsFooter: 'filter_vintage',
@@ -84,11 +83,12 @@ new Vue({
                             amount : 25
                         }
                     ]
+                },
+                coffee: {
                 }
             },
             {
                 name : '果子狸',
-                subtitle : '',
                 theme: 'card-header-primary',
                 iconsHeader: 'sports_kabaddi',
                 iconsFooter: 'all_inclusive',
@@ -186,15 +186,7 @@ new Vue({
                             subject: '儲值',
                             company: 'Jenny Pay',
                             type: 'icome',
-                            amount : 475
-                        }
-                    ],
-                    '4/9' : [
-                        {
-                            subject: '咖啡豆贊助',
-                            company: 'Jenny Pay',
-                            type: 'expense',
-                            amount : 200
+                            amount : 275
                         }
                     ],
                     '4/10' : [
@@ -205,11 +197,27 @@ new Vue({
                             amount : 45
                         }
                     ],
+                },
+                coffee: {
+                    '4/9' : [
+                        {
+                            subject: '寄杯',
+                            type: 'icome',
+                            amount: 200,
+                            cup : 15
+                        }
+                    ],
+                    '4/14' : [
+                        {
+                            subject: '三次手選 曼特寧 蘇門答臘 亞齊省',
+                            type: 'expense',
+                            proportion: 10
+                        }
+                    ]
                 }
             },
             {
                 name : 'Elenore',
-                subtitle : '',
                 theme: 'card-header-success',
                 iconsHeader: 'wb_sunny',
                 iconsFooter: 'emoji_nature',
@@ -306,21 +314,39 @@ new Vue({
                             amount : 50
                         }
                     ]
+                },
+                coffee: {
                 }
             },
             {
                 name : 'Arashi',
-                subtitle : '',
                 theme: 'card-header-info',
                 iconsHeader: 'local_cafe',
                 iconsFooter: 'local_atm',
                 lists : {
-                    '4/9' : [
+                    '4/13' : [
                         {
-                            subject: '咖啡豆贊助',
-                            company: '果子狸',
-                            type: 'icome',
-                            amount : 200
+                            bean: '水洗 衣索比亞 耶加雪菲 G1',
+                            path: 'ethiopia-yirgacheffe-g1',
+                            price : 149
+                        },
+                        {
+                            bean: '日曬 衣索比亞 古吉 烏啦嘎鎮 莓吉村 G1',
+                            path: 'ethiopia-tome-kebele',
+                            price : 179
+                        },
+                        {
+                            bean: '水洗 瓜地馬拉 安提瓜 花神 貝拉卡摩娜莊園 經典',
+                            path: 'guatemala-antigua-bella-carmona-classic',
+                            price : 149
+                        }
+                    ]
+                },
+                coffee: {
+                    '4/14' : [
+                        {
+                            bean: '三次手選 曼特寧 蘇門答臘 亞齊省',
+                            proportion: 10
                         }
                     ]
                 }
