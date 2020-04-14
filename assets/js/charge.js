@@ -321,34 +321,34 @@ new Vue({
                 theme: 'card-header-info',
                 iconsHeader: 'local_cafe',
                 iconsFooter: 'local_atm',
-                lists : {
-                    '4/13' : [
-                        {
-                            bean: '水洗 衣索比亞 耶加雪菲 G1',
-                            path: 'ethiopia-yirgacheffe-g1',
-                            price : 149
-                        },
-                        {
-                            bean: '日曬 衣索比亞 古吉 烏啦嘎鎮 莓吉村 G1',
-                            path: 'ethiopia-tome-kebele',
-                            price : 179
-                        },
-                        {
-                            bean: '水洗 瓜地馬拉 安提瓜 花神 貝拉卡摩娜莊園 經典',
-                            path: 'guatemala-antigua-bella-carmona-classic',
-                            price : 149
-                        }
-                    ]
-                },
-                coffee: {
-                    '4/14' : [
-                        {
+                lists : {},
+                menu: {
+                    '4/14' :{
                             bean: '三次手選 曼特寧 蘇門答臘 亞齊省',
                             proportion: 10
-                        }
-                    ]
+                    }
                 }
             }
-        ]
+        ],
+        coffeeShop :{
+            '4/13' : [
+                {
+                    bean: '水洗 衣索比亞 耶加雪菲 G1',
+                    path: 'ethiopia-yirgacheffe-g1',
+                    price : 149
+                },
+                {
+                    bean: '日曬 衣索比亞 古吉 烏啦嘎鎮 莓吉村 G1',
+                    path: 'ethiopia-tome-kebele',
+                    price : 179
+                },
+                {
+                    bean: '水洗 瓜地馬拉 安提瓜 花神 貝拉卡摩娜莊園 經典',
+                    path: 'guatemala-antigua-bella-carmona-classic',
+                    price : 149
+                }
+            ]
+        }
+        
     }
 });
