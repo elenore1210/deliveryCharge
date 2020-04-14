@@ -59,25 +59,91 @@
                 <div class="row">
                     <template v-for="(item, index) in collect">
                         <template v-if="item.name == selectItem">
-                            <div class="col-md-6">
+                            <template v-if="3 === index">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div :class="'card-header ' + item.theme" style="background:linear-gradient(60deg, #655730, #4D3900);
+                                        box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(97, 82, 40, 0.62);">
+                                            <h4 class="card-title">{{ item.name }} Café</h4>
+                                            <p class="card-category">
+                                                <i class="material-icons">local_cafe</i> 每日豆單
+                                            </p>
+                                        </div>
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-hover">
+                                                <thead class="text-warning">
+                                                    <th>日期</th>
+                                                    <th>咖啡豆</th>
+                                                    <th>比例</th>
+                                                    <th class="text-right"></th>
+                                                </thead>
+                                                <tbody>
+                                                    <template v-for="(order, date) in item.coffee">
+                                                        <template v-for="(detail, no) in order">
+                                                            <tr>
+                                                                <td><template v-if="0 === no">{{ date }}</template></td>
+                                                                <td class="td-name">
+                                                                    <h4>{{ detail.bean }}</h4>
+                                                                </td>
+                                                                <td class="td-number"> 1:{{ detail.proportion }} </td>
+                                                                <td class="td-number text-right">
+                                                                    <template v-if="10 === detail.proportion">
+                                                                        Latte
+                                                                    </template>
+                                                                    <template v-else>
+                                                                        Americano
+                                                                    </template>
+                                                                </td>
+                                                            </tr>
+                                                        </template>
+                                                    </template>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div :class="'card-header ' + item.theme">
+                                             <h4 class="card-title">{{ item.name }} Café</h4>
+                                            <p class="card-category">
+                                                <i class="material-icons">{{ item.iconsFooter }}</i> 咖啡豆進貨清單
+                                            </p>
+                                        </div>
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-hover">
+                                                <thead class="text-warning">
+                                                    <th>日期</th>
+                                                    <th>品項</th>
+                                                    <th class="text-right">金額</th>
+                                                </thead>
+                                                <tbody>
+                                                <template v-for="(list, date) in item.lists">
+                                                    <template v-for="(detail, no) in list">
+                                                        <tr>
+                                                            <td><template v-if="0 === no">{{ date }}</template></td>
+                                                            <td class="td-name">
+                                                                <a :href="'https://www.buoncaffe.com.tw/products/' + detail.path" target="_blank"><h4>{{ detail.bean }}</h4></a>
+                                                            </td>
+                                                            <td class="td-number text-right">
+                                                                <p class="text-danger">{{ detail.price }}</p>
+                                                            </td>
+                                                        </tr>
+                                                    </template>
+                                                </template>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                            <template v-else>
+                                <div class="col-md-6">
                                 <div class="card">
                                     <div :class="'card-header ' + item.theme">
-                                         <h4 class="card-title">
-                                            <template v-if="3 === index">
-                                                Arashi Café
-                                            </template>
-                                            <template v-else>
-                                                {{ item.name }}
-                                            </template>
-                                        </h4>
+                                        <h4 class="card-title">{{ item.name }}</h4>
                                         <p class="card-category">
-                                            <i class="material-icons">{{ item.iconsFooter }}</i> 
-                                            <template v-if="3 === index">
-                                                咖啡豆進貨清單
-                                            </template>
-                                            <template v-else>
-                                                療癒的吃吃喝喝
-                                            </template>
+                                            <i class="material-icons">{{ item.iconsFooter }}</i> 療癒的吃吃喝喝
                                         </p>
                                     </div>
                                     <div class="card-body table-responsive">
@@ -92,28 +158,18 @@
                                                 <template v-for="(detail, no) in list">
                                                     <tr>
                                                         <td><template v-if="0 === no">{{ date }}</template></td>
-                                                        <template v-if="3 === index">
-                                                            <td class="td-name">
-                                                                <a :href="'https://www.buoncaffe.com.tw/products/' + detail.path" target="_blank"><h4>{{ detail.bean }}</h4></a>
-                                                            </td>
-                                                            <td class="td-number text-right">
-                                                                <p class="text-danger">{{ detail.price }}</p>
-                                                            </td>
-                                                        </template>
-                                                        <template v-else>
-                                                            <td class="td-name">
-                                                                <h4 style="color: #0d47a1">{{ detail.subject }}</h4>
-                                                                <br>
-                                                                <small>by {{ detail.company }}</small>
-                                                            </td>
-                                                            <td class="td-number text-right">
-                                                                <p :class="('expense' === detail.type) ? 'text-danger' : 'text-info'">{{ detail.amount }}</p>
-                                                            </td>
-                                                        </template>
+                                                        <td class="td-name">
+                                                            <h4 style="color: #0d47a1">{{ detail.subject }}</h4>
+                                                            <br>
+                                                            <small>by {{ detail.company }}</small>
+                                                        </td>
+                                                        <td class="td-number text-right">
+                                                            <p :class="('expense' === detail.type) ? 'text-danger' : 'text-info'">{{ detail.amount }}</p>
+                                                        </td>
                                                     </tr>
                                                 </template>
                                             </template>
-                                            <tr v-if="3 !== index">
+                                            <tr>
                                                 <td colspan="2" class="td-total">結餘</td>
                                                 <td class="td-price"><small>NT$</small>{{ _(item.lists)
                                                     .map()
@@ -129,89 +185,53 @@
                                 <div class="card">
                                     <div :class="'card-header ' + item.theme" style="background:linear-gradient(60deg, #655730, #4D3900);
                                     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(97, 82, 40, 0.62);">
-                                        <h4 class="card-title">
-                                            <template v-if="3 === index">
-                                                Arashi Café
-                                            </template>
-                                            <template v-else>
-                                                {{ item.name }}
-                                            </template>
-                                        </h4>
+                                        <h4 class="card-title">{{ item.name }}</h4>
                                         <p class="card-category">
-                                            <i class="material-icons">local_cafe</i> 
-                                            <template v-if="3 === index">
-                                                每日豆單
-                                            </template>
-                                            <template v-else>
-                                                Arashi Café
-                                            </template>
+                                            <i class="material-icons">local_cafe</i> Arashi Café
                                         </p>
                                     </div>
                                     <div class="card-body table-responsive">
                                         <table class="table table-hover">
                                             <thead class="text-warning">
                                                 <th>日期</th>
-                                                <template v-if="3 === index">
-                                                    <th>咖啡豆</th>
-                                                    <th>比例</th>
-                                                    <th class="text-right"></th>
-                                                </template>
-                                                <template v-else>
-                                                    <th>品項</th>
-                                                    <th class="text-right">杯數</th>
-                                                </template>
+                                                <th>品項</th>
+                                                <th class="text-right">杯數</th>
                                             </thead>
                                             <tbody>
                                                 <template v-for="(order, date) in item.coffee">
                                                     <template v-for="(detail, no) in order">
                                                         <tr>
                                                             <td><template v-if="0 === no">{{ date }}</template></td>
-                                                            <template v-if="3 === index">
-                                                                <td class="td-name">
-                                                                    <h4>{{ detail.bean }}</h4>
-                                                                </td>
-                                                                <td class="td-number"> 1:{{ detail.proportion }} </td>
-                                                                <td class="td-number text-right">
-                                                                    <template v-if="10 === detail.proportion">
-                                                                        Latte
-                                                                    </template>
-                                                                    <template v-else>
-                                                                        Americano
-                                                                    </template>
-                                                                </td>
-                                                            </template>
-                                                            <template v-else>
-                                                                 <td class="td-name">
-                                                                    <h4>{{ detail.subject }}</h4>
-                                                                    <br>
-                                                                    <small>
-                                                                    <template v-if="'expense' !== detail.type">
-                                                                        <p class="text-info">{{ detail.amount }}</p>
-                                                                    </template>
-                                                                    <template v-else>
-                                                                        <template v-if="10 === detail.proportion">Latte</template>
-                                                                        <template v-else>Americano</template>
-                                                                    </template>
-                                                                    </small>
-                                                                </td>
-                                                                <td class="td-number text-right">
-                                                                    <template v-if="'expense' === detail.type">
-                                                                        <p class="text-danger">1</p>
-                                                                    </template>
-                                                                    <template v-else>
-                                                                        <p class="text-info">{{ detail.cup }}</p>
-                                                                    </template>
-                                                                </td>
-                                                            </template>
+                                                            <td class="td-name">
+                                                                <h4>{{ detail.subject }}</h4>
+                                                                <br>
+                                                                <small>
+                                                                <template v-if="'expense' !== detail.type">
+                                                                    <p class="text-info">{{ detail.amount }}</p>
+                                                                </template>
+                                                                <template v-else>
+                                                                    <template v-if="10 === detail.proportion">Latte</template>
+                                                                    <template v-else>Americano</template>
+                                                                </template>
+                                                                </small>
+                                                            </td>
+                                                            <td class="td-number text-right">
+                                                                <template v-if="'expense' === detail.type">
+                                                                    <p class="text-danger">1</p>
+                                                                </template>
+                                                                <template v-else>
+                                                                    <p class="text-info">{{ detail.cup }}</p>
+                                                                </template>
+                                                            </td>
                                                         </tr>
                                                     </template>
                                                 </template>
-                                                        <tr v-if="3 !== index">
+                                                        <tr>
                                                             <td colspan="2" class="td-total">結餘</td>
                                                             <td class="td-price">{{ _(item.coffee)
                                                                 .map()
                                                                 .flatten()
-                                                                .sumBy(({ type, cup }) => type === 'expense' ? -cup : cup) }} <small>杯</small>
+                                                                .sumBy(({ type, cup }) => type === 'expense' ? -1 : cup) }} <small>杯</small>
                                                             </td>
                                                         </tr>
                                             </tbody>
@@ -219,6 +239,7 @@
                                     </div>
                                 </div>
                             </div>
+                            </template>
                         </template>
                     </template>
                 </div>
