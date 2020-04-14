@@ -202,27 +202,29 @@
                                                     <template v-for="(detail, no) in order">
                                                         <tr>
                                                             <td><template v-if="0 === no">{{ date }}</template></td>
-                                                            <td class="td-name">
-                                                                <h4>{{ detail.subject }}</h4>
-                                                                <br>
-                                                                <small>
-                                                                <template v-if="'expense' !== detail.type">
-                                                                    <p class="text-info">{{ detail.amount }}</p>
-                                                                </template>
-                                                                <template v-else>
-                                                                    <template v-if="10 === detail.proportion">Latte</template>
-                                                                    <template v-else>Americano</template>
-                                                                </template>
-                                                                </small>
-                                                            </td>
-                                                            <td class="td-number text-right">
-                                                                <template v-if="'expense' === detail.type">
+                                                            <template v-if="'expense' === detail.type">
+                                                                <td class="td-name">
+                                                                    <h4>
+                                                                    <br>
+                                                                    <small>
+                                                                        <template v-if="10 === detail.proportion">Latte</template>
+                                                                        <template v-else>Americano</template>
+                                                                    </small>
+                                                                </td>
+                                                                <td class="td-number text-right">
                                                                     <p class="text-danger">1</p>
-                                                                </template>
-                                                                <template v-else>
+                                                                </td>
+                                                            </template>
+                                                            <template v-else>
+                                                                <td class="td-name">
+                                                                    <h4>{{ detail.subject }}</h4>
+                                                                    <br>
+                                                                    <small><p class="text-info">{{ detail.amount }}</p></small>
+                                                                </td>
+                                                                <td class="td-number text-right">
                                                                     <p class="text-info">{{ detail.cup }}</p>
-                                                                </template>
-                                                            </td>
+                                                                </td>
+                                                            </template>
                                                         </tr>
                                                     </template>
                                                 </template>

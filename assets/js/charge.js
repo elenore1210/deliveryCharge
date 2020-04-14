@@ -209,9 +209,7 @@ new Vue({
                     ],
                     '4/14' : [
                         {
-                            subject: '三次手選 曼特寧 蘇門答臘 亞齊省',
-                            type: 'expense',
-                            proportion: 10
+                            type: 'expense'
                         }
                     ]
                 }
