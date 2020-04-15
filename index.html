@@ -197,45 +197,39 @@
                                                 </thead>
                                                 <tbody>
                                                     <template v-for="(order, date) in item.coffee">
-                                                        <template v-for="(detail, no) in order">
-                                                            <tr>
-                                                                <td><template v-if="0 === no">{{ date }}</template></td>
-                                                                <template v-if="'expense' === detail.type">
-                                                                    <td class="td-name">
-                                                                        <h4>{{ 
-                                                                            collect[3].menu[date].bean
-                                                                        }}</h4>
-                                                                        <br>
-                                                                        <small>
-                                                                            <template v-if="10 === collect[3].menu[date].proportion">Latte</template>
-                                                                            <template v-else>Americano</template>
-                                                                        </small>
-                                                                    </td>
-                                                                    <td class="td-number text-right">
-                                                                        <p class="text-danger">1</p>
-                                                                    </td>
-                                                                </template>
-                                                                <template v-else>
-                                                                    <td class="td-name">
-                                                                        <h4>{{ detail.subject }}</h4>
-                                                                        <br>
-                                                                        <small><p class="text-info">{{ detail.amount }}</p></small>
-                                                                    </td>
-                                                                    <td class="td-number text-right">
-                                                                        <p class="text-info">{{ detail.cup }}</p>
-                                                                    </td>
-                                                                </template>
-                                                            </tr>
+                                                    <tr>
+                                                        <td>{{ date }}</td>
+                                                        <template v-if="'expense' === order.type">
+                                                            <td class="td-name">
+                                                                <h4>{{ collect[3].menu[date].bean }}</h4>
+                                                                <br>
+                                                                <small>
+                                                                    <template v-if="10 === collect[3].menu[date].proportion">Latte</template>
+                                                                    <template v-else>Americano</template>
+                                                                </small>
+                                                            </td>
+                                                            <td class="td-number text-right"><p class="text-danger">1</p></td>
                                                         </template>
+                                                        <template v-else>
+                                                            <td class="td-name">
+                                                                <h4>{{ order.subject }}</h4>
+                                                                <br>
+                                                                <small><p class="text-info">{{ order.amount }}</p></small>
+                                                            </td>
+                                                            <td class="td-number text-right">
+                                                                <p class="text-info">{{ order.cup }}</p>
+                                                            </td>
+                                                        </template>
+                                                    </tr>
                                                     </template>
-                                                            <tr>
-                                                                <td colspan="2" class="td-total">剩餘杯數</td>
-                                                                <td class="td-price">{{ _(item.coffee)
-                                                                    .map()
-                                                                    .flatten()
-                                                                    .sumBy(({ type, cup }) => type === 'expense' ? -1 : cup) }}
-                                                                </td>
-                                                            </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="td-total">剩餘杯數</td>
+                                                        <td class="td-price">{{ _(item.coffee)
+                                                            .map()
+                                                            .flatten()
+                                                            .sumBy(({ type, cup }) => type === 'expense' ? -1 : cup) }}
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
