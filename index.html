@@ -74,8 +74,6 @@
                                                 <thead class="text-warning">
                                                     <th>日期</th>
                                                     <th>咖啡豆</th>
-                                                    <th>比例</th>
-                                                    <th class="text-right"></th>
                                                 </thead>
                                                 <tbody>
                                                     <template v-for="(today, date) in item.menu">
@@ -83,9 +81,8 @@
                                                             <td>{{ date }}</td>
                                                             <td class="td-name">
                                                                 <h4>{{ today.bean }}</h4>
-                                                            </td>
-                                                            <td class="td-number"> 1:{{ today.proportion }} </td>
-                                                            <td class="td-number text-right">
+                                                                <br>
+                                                                1:{{ today.proportion }}
                                                                 <template v-if="10 === today.proportion">
                                                                     Latte
                                                                 </template>
