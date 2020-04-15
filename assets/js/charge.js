@@ -346,6 +346,18 @@ new Vue({
                 iconsFooter: 'local_atm',
                 lists : {},
                 menu: {
+                    '4/8' :{
+                            bean: '精選深焙單品豆 肯亞 SOE',
+                            proportion: 10
+                    },
+                    '4/9' :{
+                            bean: '精選深焙單品豆 肯亞 SOE',
+                            proportion: 10
+                    },
+                    '4/10' :{
+                            bean: '三次手選 曼特寧 蘇門答臘 亞齊省',
+                            proportion: 15
+                    },
                     '4/14' :{
                             bean: '三次手選 曼特寧 蘇門答臘 亞齊省',
                             proportion: 10
