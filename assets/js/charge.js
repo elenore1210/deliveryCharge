@@ -82,6 +82,14 @@ new Vue({
                             type: 'expense',
                             amount : 25
                         }
+                    ],
+                    '4/15' : [
+                        {
+                            subject: '熱鐵觀音拿鐵',
+                            company: '春水堂',
+                            type: 'expense',
+                            amount : 115
+                        }
                     ]
                 },
                 coffee: {
@@ -197,21 +205,28 @@ new Vue({
                             amount : 45
                         }
                     ],
+                    '4/15' : [
+                        {
+                            subject: '熱珍珠奶茶',
+                            company: '春水堂',
+                            type: 'expense',
+                            amount : 105
+                        }
+                    ]
                 },
                 coffee: {
-                    '4/9' : [
-                        {
+                    '4/9' :{
                             subject: '寄杯',
                             type: 'icome',
                             amount: 200,
                             cup : 15
-                        }
-                    ],
-                    '4/14' : [
-                        {
+                    },
+                    '4/14' :{
                             type: 'expense'
-                        }
-                    ]
+                    },
+                    '4/15' :{
+                            type: 'expense'
+                    }
                 }
             },
             {
@@ -311,6 +326,14 @@ new Vue({
                             type: 'expense',
                             amount : 50
                         }
+                    ],
+                    '4/15' : [
+                        {
+                            subject: '冰觀音珍珠奶茶',
+                            company: '春水堂',
+                            type: 'expense',
+                            amount : 95
+                        }
                     ]
                 },
                 coffee: {
@@ -326,21 +349,52 @@ new Vue({
                     '4/14' :{
                             bean: '三次手選 曼特寧 蘇門答臘 亞齊省',
                             proportion: 10
+                    },
+                    '4/15' :{
+                            bean: '水洗 瓜地馬拉 基切省 睡美人莊園',
+                            proportion: 15
                     }
                 }
             }
         ],
         coffeeShop :{
+            '3/9' : [
+                {
+                    bean: '水洗 瓜地馬拉 基切省 睡美人莊園',
+                    path: 'guatemala-quiche-finca-la-perla',
+                    price : 398
+                },
+                {
+                    bean: '黃蜜處理 薩爾瓦多 庇里牛斯莊園 波旁種',
+                    path: 'yellowhoney-salvador-bourbona',
+                    price : 358
+                },
+                {
+                    bean: '牧羊犬特調',
+                    path: 'shepherd-blend',
+                    price : 258
+                },
+                {
+                    bean: '精選深焙單品豆 肯亞 SOE',
+                    path: 'kenya-soe',
+                    price : 169
+                }
+            ],
             '4/13' : [
                 {
-                    bean: '水洗 衣索比亞 耶加雪菲 G1',
-                    path: 'ethiopia-yirgacheffe-g1',
-                    price : 149
+                    bean: '日曬 衣索比亞 G1 烏啦嘎 野櫻花（原價 598 元，48 折購入）',
+                    path: 'ethiopia-uraga-sakura',
+                    price : 299
                 },
                 {
                     bean: '日曬 衣索比亞 古吉 烏啦嘎鎮 莓吉村 G1',
                     path: 'ethiopia-tome-kebele',
                     price : 179
+                },
+                {
+                    bean: '水洗 衣索比亞 耶加雪菲 G1',
+                    path: 'ethiopia-yirgacheffe-g1',
+                    price : 149
                 },
                 {
                     bean: '水洗 瓜地馬拉 安提瓜 花神 貝拉卡摩娜莊園 經典',
