@@ -339,7 +339,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'expense',
+                            type: 'icome',
                             amount : 500
                         }
                     ]
