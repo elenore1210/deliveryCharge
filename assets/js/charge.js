@@ -334,6 +334,14 @@ new Vue({
                             type: 'expense',
                             amount : 95
                         }
+                    ],
+                    '4/16' : [
+                        {
+                            subject: '儲值',
+                            company: 'Jenny Pay',
+                            type: 'expense',
+                            amount : 500
+                        }
                     ]
                 },
                 coffee: {
