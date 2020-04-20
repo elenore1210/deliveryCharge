@@ -340,11 +340,17 @@ new Vue({
                             subject: '儲值',
                             company: 'Jenny Pay',
                             type: 'income',
-                            amount : 500
+                            amount : 300
                         }
                     ]
                 },
                 coffee: {
+                    '4/20' :{
+                        subject: '寄杯',
+                        type: 'income',
+                        amount: 200,
+                        cup : 10
+                    }
                 }
             },
             {
