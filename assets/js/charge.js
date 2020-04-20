@@ -13,7 +13,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 500
                         },
                         {
@@ -73,7 +73,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 500
                         },
                         {
@@ -105,7 +105,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 500
                         },
                         {
@@ -133,7 +133,7 @@ new Vue({
                         {
                             subject: '幫蒸妮買早餐',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 30
                         },
                         {
@@ -147,7 +147,7 @@ new Vue({
                         {
                             subject: '四號電池',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 55
                         },
                         {
@@ -193,7 +193,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 275
                         }
                     ],
@@ -217,7 +217,7 @@ new Vue({
                 coffee: {
                     '4/9' :{
                             subject: '寄杯',
-                            type: 'icome',
+                            type: 'income',
                             amount: 200,
                             cup : 15
                     },
@@ -239,7 +239,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 255
                         },
                         {
@@ -259,7 +259,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 100
                         },
                         {
@@ -273,7 +273,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 30
                         },
                         {
@@ -287,7 +287,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 100
                         },
                         {
@@ -317,7 +317,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 100
                         },
                         {
@@ -339,7 +339,7 @@ new Vue({
                         {
                             subject: '儲值',
                             company: 'Jenny Pay',
-                            type: 'icome',
+                            type: 'income',
                             amount : 500
                         }
                     ]
